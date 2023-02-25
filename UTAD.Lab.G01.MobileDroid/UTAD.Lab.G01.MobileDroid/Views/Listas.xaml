@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="UTAD.Lab.G01.MobileDroid.Views.AboutPage"
+             xmlns:vm="clr-namespace:UTAD.Lab.G01.MobileDroid.ViewModels"
+             Title="{Binding Title}">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Atualizar" Activated="ToolbarItem_Activated" />
+    </ContentPage.ToolbarItems>
+
+    <ContentPage.BindingContext>
+        <vm:ListasModel />
+    </ContentPage.BindingContext>
+    <StackLayout Spacing="3">
+        <ListView
+              HasUnevenRows="True"
+              RowHeight="100">
+            <ListView.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>Lista um</x:String>
+                    <x:String>Lista dois</x:String>
+                    <x:String>Lista três</x:String>
+                </x:Array>
+            </ListView.ItemsSource>
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Padding="10" HorizontalOptions="Fill">
+                            <Label FontSize="Medium" Padding="5" Text="{Binding .}"/>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+
+            </ListView.ItemTemplate>
+        </ListView>
+        <StackLayout Margin="20,35,20,20" Orientation="Horizontal">
+            <Button x:Name="Adicionar" HorizontalOptions="CenterAndExpand" Text="Adicionar" Clicked="Adicionar_Clicked"></Button>
+        </StackLayout>
+
+    </StackLayout>
+</ContentPage>

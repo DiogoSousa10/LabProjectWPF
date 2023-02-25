@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:UTAD.Lab.G01.MobileDroid.Views"
+             x:Class="UTAD.Lab.G01.MobileDroid.Views.ListView">
+
+    <ContentPage.BindingContext>
+
+        <local:ListViewModel2> </local:ListViewModel2>
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <StackLayout>
+            <Grid Padding="10" RowSpacing="10" ColumnSpacing="10">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+
+
+                </Grid.ColumnDefinitions>
+                <Entry Placeholder="Item -> Nome" Text="{Binding ItemName}" Grid.Column="1" VerticalTextAlignment="Start" ></Entry>
+                <Entry  Placeholder="Item -> Quantidade" Text="{Binding ItemQuantidade}" Grid.Column="2"  VerticalTextAlignment="End"></Entry>
+            </Grid>
+            <Button Text="Add" Command="{Binding AddItemsCommand}"></Button>
+            <Button Text="Remove" Command="{Binding RemoveItemsCommand}"> </Button>
+            <Button Text="Update" Command="{Binding UpdateItemsCommand}"></Button>
+            <ListView x:Name="lvItems" ItemsSource="{Binding Items}" SelectedItem="{Binding SelectItem}">
+               
+
+            </ListView>
+          
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

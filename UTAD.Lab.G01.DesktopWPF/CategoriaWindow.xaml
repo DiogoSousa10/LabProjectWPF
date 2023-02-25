@@ -1,0 +1,32 @@
+﻿<Window x:Class="UTAD.Lab.G01.DesktopWPF.CategoriaWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:UTAD.Lab.G01.DesktopWPF"
+        mc:Ignorable="d"
+        Title="CategoriaWindow" Height="233" Width="363" Loaded="Window_Loaded">
+    <Grid>
+        <StackPanel Width="360" Height="218" >
+            <Grid Height="218">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="90*"/>
+                    <ColumnDefinition Width="160*"/>
+                    <ColumnDefinition Width="80*"/>
+                </Grid.ColumnDefinitions>
+                <Label Content="Nome: " HorizontalAlignment="Left" Width="50" Height="25" VerticalAlignment="Top" Margin="20,40,0,0" Grid.Column="0"/>
+                <Label Content="Categoria: " HorizontalAlignment="Left" Width="70" Height="27" VerticalAlignment="Top" Margin="20,100,0,0" Grid.Column="0"/>
+                <TextBlock IsEnabled="False" x:Name="txtCatRecebida" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,0,0,0" Height="25" Width="150" Grid.Column="1" />
+                <TextBox x:Name="txtCategoria" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,40,0,0" Height="25" Width="150" Grid.Column="1" />
+                <Button x:Name="btAdicionar" Content="Adicionar" Width="80" Height="20" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,70,0,0" Grid.Column="1" Click="btAdicionar_Click"/>
+                <ComboBox x:Name="cbEliminar" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,100,0,0" Height="25" Width="150" Grid.Column="1">
+                </ComboBox>
+                <Button x:Name="btEliminar" Content="Apagar" Width="80" Height="20" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,130,0,0" Grid.Column="1" Click="btEliminar_Click"/>
+                <Button x:Name="btCancelar" Content="Cancelar" Width="80" Height="20" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,5,30" Grid.Column="2" Click="btCancelar_Click"/>
+
+            </Grid>
+        </StackPanel>
+
+    </Grid>
+</Window>
+

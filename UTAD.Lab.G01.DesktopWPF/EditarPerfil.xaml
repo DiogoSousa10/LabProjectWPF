@@ -1,0 +1,38 @@
+﻿<Window x:Class="UTAD.Lab.G01.DesktopWPF.EditarPerfil"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:UTAD.Lab.G01.DesktopWPF"
+        mc:Ignorable="d"
+        Title="Editar Perfil" Height="379" Width="444">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="150"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <StackPanel Orientation="Vertical" Grid.Column="0">
+            <Label Content="Foto de Perfil:" Height="25" Width="85" VerticalAlignment="Bottom" HorizontalAlignment="Center" Margin="0,25,0,0" Grid.Column="0"/>
+            <Image x:Name="imagePerfil" Height="130" Width="130" Margin="10,10,10,10" VerticalAlignment="Top" HorizontalAlignment="Left" Grid.Column="0"/>
+            <Button x:Name="btEditarFoto" Content="Editar Foto" Width="70" Height="25" Margin="0,0,0,0" VerticalAlignment="Top" HorizontalAlignment="Center" Grid.Column="0"/>
+        </StackPanel>
+        <StackPanel Orientation="Vertical" Grid.Column="1">
+            <Label Content="Nome:" HorizontalAlignment="Right" VerticalAlignment="Top" Width="50" Height="25" Margin="20,40,10,0"/>
+            <Label Content="Apelido:" HorizontalAlignment="Right" VerticalAlignment="Top" Width="60" Height="25" Margin="20,10,10,0"/>
+            <Label Content="Password:" HorizontalAlignment="Right" VerticalAlignment="Top" Width="65" Height="25" Margin="20,10,10,0"/>
+            <Label Content="Confirmar Password:" HorizontalAlignment="Right" VerticalAlignment="Top" Width="120" Height="25" Margin="20,10,10,0"/>
+            <Label Content="Número de Telemovel:" HorizontalAlignment="Right" Width="130" Height="25" Margin="0,10,10,0" Grid.Column="1"/>
+            <Button x:Name="btAlterar" Content="Alterar Dados" Height="25" Width="80" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="30,20,0,10"/>
+            <Button Content="Cancelar" Name="btCancelar" Height="25" Width="80" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="30,50,0,15" Click="btCancelar_Click"/>
+        </StackPanel>
+        <StackPanel Orientation="Vertical" Grid.Column="2">
+            <TextBox x:Name="txtNome" Height="25" Width="130" HorizontalAlignment="Left" VerticalAlignment="Top" Text="" Margin="0,40,0,0"/>
+            <TextBox x:Name="txtApelido" Height="25" Width="130" HorizontalAlignment="Left" VerticalAlignment="Top" Text="" Margin="0,10,0,0"/>
+            <PasswordBox x:Name="txtPassword" Height="25" Width="130" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,10,0,0"/>
+            <TextBox x:Name="txtConfirmar" Height="25" Width="130" HorizontalAlignment="Left" VerticalAlignment="Top" Text="" Margin="0,10,0,0"/>
+            <TextBox x:Name="txtTelemovel" Height="25" Width="130" HorizontalAlignment="Left" VerticalAlignment="Top" Text="" Margin="0,10,0,0"/>
+            <Button x:Name="btSalvar" Content="Salvar Dados" IsEnabled="False" Width="80" Height="25" Margin="10,20,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        </StackPanel>
+    </Grid>
+</Window>

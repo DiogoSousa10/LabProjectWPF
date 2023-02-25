@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="UTAD.Lab.G01.MobileDroid.Views.MenuToolbar">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Atualizar" Activated="ToolbarItem_Activated" />
+        <ToolbarItem Text="Remover" Activated="ToolbarItem_Activated" />
+        <ToolbarItem Text="Pesquisar" Activated="ToolbarItem_Activated" />
+        <ToolbarItem Text="Cancelar" Activated="ToolbarItem_Activated" />
+    </ContentPage.ToolbarItems>
+</ContentPage>
+         

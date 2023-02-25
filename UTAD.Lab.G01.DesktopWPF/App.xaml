@@ -1,0 +1,9 @@
+﻿<Application x:Class="UTAD.Lab.G01.DesktopWPF.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:UTAD.Lab.G01.DesktopWPF"
+             StartupUri="LoginWindow.xaml">
+    <Application.Resources>
+         
+    </Application.Resources>
+</Application>
